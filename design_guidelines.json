@@ -1,0 +1,147 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) with Earthy Accents",
+  "domain": "Pest Control ERP + CRM + Technician Mobile App",
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["400", "500", "700"],
+      "usage": "Use Outfit for all headings to provide a modern, authoritative, and clean corporate feel. Do not use Inter for headings.",
+      "scales": {
+        "h1": "text-4xl sm:text-5xl tracking-tight leading-none",
+        "h2": "text-2xl sm:text-3xl tracking-tight leading-tight",
+        "h3": "text-xl sm:text-2xl tracking-tight",
+        "h4": "text-lg sm:text-xl font-medium"
+      }
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use Inter for dense body text, tables, forms, and data visualization to ensure maximum legibility at small sizes.",
+      "scales": {
+        "base": "text-base leading-relaxed",
+        "small": "text-sm leading-normal",
+        "tiny": "text-xs tracking-[0.02em] uppercase font-medium"
+      }
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#047857",
+      "foreground": "#ffffff",
+      "hover": "#065f46",
+      "dark_mode": "#10b981",
+      "dark_mode_foreground": "#022c22"
+    },
+    "background": {
+      "light": "#ffffff",
+      "dark": "#0a0a0a",
+      "panel_light": "#f8fafc",
+      "panel_dark": "#171717"
+    },
+    "surface": {
+      "card_light": "#ffffff",
+      "card_dark": "#171717",
+      "border_light": "#e2e8f0",
+      "border_dark": "#262626"
+    },
+    "text": {
+      "primary_light": "#0f172a",
+      "secondary_light": "#475569",
+      "primary_dark": "#f8fafc",
+      "secondary_dark": "#94a3b8"
+    },
+    "status": {
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "danger": "#ef4444",
+      "info": "#3b82f6"
+    }
+  },
+  "layout": {
+    "spacing_system": "Use generous padding inside cards (p-6) to prevent text collision. Use tight gaps (gap-4 or gap-6) for dashboard grids.",
+    "dashboard_grid": {
+      "style": "Control Room Grid",
+      "desktop": "grid-cols-4 or grid-cols-12",
+      "tablet": "grid-cols-2",
+      "mobile": "grid-cols-1",
+      "rules": "Every pixel must be utilized. Use h-full on children to ensure they stretch to match their neighbors."
+    },
+    "kanban_board": {
+      "style": "Horizontal scrollable flex container with fixed-width columns (w-80), cards inside should have 1px borders and subtle shadow-sm."
+    },
+    "mobile_technician_app": {
+      "navigation": "Bottom tab bar with 4-5 key actions (Home, Schedule, Map, Profile).",
+      "touch_targets": "Minimum 48x48px for all buttons and interactive elements.",
+      "layout": "Mobile-first, full-width edge-to-edge cards. Large primary action buttons sticky at the bottom."
+    }
+  },
+  "components": {
+    "cards": {
+      "style": "Sharp edges or max 8px border-radius (rounded-lg). Flat solid background. 1px solid border (border-border). No heavy drop shadows. On hover: -translate-y-1 and shadow-md.",
+      "padding": "p-6"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground rounded-md px-4 py-2 font-medium hover:bg-primary/90 transition-colors",
+      "secondary": "bg-transparent border border-input rounded-md px-4 py-2 hover:bg-accent hover:text-accent-foreground",
+      "ghost": "bg-transparent hover:bg-accent hover:text-accent-foreground rounded-md"
+    },
+    "inputs_and_forms": {
+      "style": "Shadcn defaults. 1px border, rounded-md, clear focus ring (focus:ring-2 focus:ring-primary/20). Left-aligned labels."
+    },
+    "tables": {
+      "style": "Dense data tables. Sticky headers. 1px border-b on rows. Hover state on rows for better tracking."
+    },
+    "modals_and_dialogs": {
+      "style": "Glassmorphism is BANNED for this ERP. Use flat solid backgrounds with a 1px border and a dark overlay (bg-black/50 backdrop-blur-sm)."
+    }
+  },
+  "motion_and_interactions": {
+    "hover_states": "All interactive elements MUST have a hover state. Buttons should shift color slightly. Cards should lift (-translate-y-1).",
+    "transitions": "Use transition-all duration-200 ease-in-out for basic state changes.",
+    "modals": "Fade in and slight scale up (from 0.95 to 1)."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use consistently sized icons (w-5 h-5 for buttons/menus, w-8 h-8 for empty states). Stroke width 2 or 1.5."
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 for normal text.",
+    "testing": "All interactive and key informational elements MUST include a data-testid attribute.",
+    "focus": "Clear focus rings on all inputs and buttons."
+  },
+  "media": {
+    "image_urls": {
+      "login_background": {
+        "url": "https://images.pexels.com/photos/28648054/pexels-photo-28648054.jpeg",
+        "description": "Abstract modern green texture background",
+        "usage": "Use as a full-bleed background for the login/authentication screen."
+      },
+      "technician_avatar_1": {
+        "url": "https://images.unsplash.com/photo-1627098241506-344dea0aa27b",
+        "description": "Pest control technician",
+        "usage": "Placeholder for technician profile picture in lists and mobile app."
+      },
+      "technician_avatar_2": {
+        "url": "https://images.unsplash.com/photo-1605658781469-50bcc2522522",
+        "description": "Pest control technician",
+        "usage": "Placeholder for technician profile picture in lists and mobile app."
+      },
+      "service_report_hero": {
+        "url": "https://images.pexels.com/photos/19789841/pexels-photo-19789841.jpeg",
+        "description": "Pest control specialist using fumigation machine",
+        "usage": "Hero image for the marketing/landing page if any, or PDF report cover."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Prioritize Shadcn components customized with the defined typography and colors.",
+    "Ensure dark mode is supported out-of-the-box by using CSS variables for colors.",
+    "The Dashboard must use the 'Control Room' grid pattern: dense, strictly aligned, fully utilizing available space.",
+    "The Lead Management pipeline must be a horizontal Kanban board using CSS Flex or Grid.",
+    "For the Technician Mobile App view, enforce a mobile-first layout with a bottom navigation bar and large touch targets.",
+    "Include 'data-testid' on all buttons, links, form inputs, and key UI components.",
+    "Do not use generic placeholder image URLs (like via.placeholder.com). Use the URLs provided in the media section.",
+    "Arabic support: Ensure layout uses flexbox gap and standard logical properties (start/end instead of left/right) where possible so RTL can be supported later."
+  ]
+}
