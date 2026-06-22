@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 161 94% 24%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 161 94% 95%;
+        --accent-foreground: 161 94% 18%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 214 32% 91%;
+        --input: 214 32% 91%;
+        --ring: 161 94% 24%;
+        --chart-1: 161 94% 30%;
+        --chart-2: 217 91% 60%;
+        --chart-3: 38 92% 50%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+        --radius: 0.5rem;
+        --sidebar-bg: 222 47% 11%;
+        --sidebar-fg: 210 40% 96%;
+    }
+    .dark {
+        --background: 0 0% 4%;
+        --foreground: 210 40% 98%;
+        --card: 0 0% 9%;
+        --card-foreground: 210 40% 98%;
+        --popover: 0 0% 9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 161 84% 46%;
+        --primary-foreground: 161 100% 8%;
+        --secondary: 0 0% 14%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 0 0% 14%;
+        --muted-foreground: 215 20% 65%;
+        --accent: 161 84% 14%;
+        --accent-foreground: 161 84% 90%;
+        --destructive: 0 62% 41%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 16%;
+        --input: 0 0% 16%;
+        --ring: 161 84% 46%;
+        --sidebar-bg: 0 0% 7%;
+        --sidebar-fg: 210 40% 96%;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground)); }
+
+/* Kanban */
+.kanban-col { min-width: 280px; max-width: 280px; }
+
+.signature-canvas { touch-action: none; cursor: crosshair; background: white; }
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
