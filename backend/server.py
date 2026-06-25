@@ -4,6 +4,7 @@ Production-ready FastAPI server with MongoDB, JWT auth, RBAC, and Claude AI assi
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, status, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -29,6 +30,16 @@ db = client[DB_NAME]
 app = FastAPI(title="Pest Control ERP API")
 api = APIRouter(prefix="/api")
 bearer = HTTPBearer(auto_error=False)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://vkpestcontrol-erp.xradhi5685.workers.dev"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ---------- Helpers ----------
 def now_iso() -> str:
