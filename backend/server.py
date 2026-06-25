@@ -16,7 +16,7 @@ import os, uuid, jwt, bcrypt, logging, asyncio, json
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / ".env")
 
-MONGO_URL = os.environ["MONGO_URL"]
+MONGO_URL = os.environ["MONGO_URI"]
 DB_NAME = os.environ["DB_NAME"]
 JWT_SECRET = os.environ["JWT_SECRET"]
 EMERGENT_LLM_KEY = os.environ.get("EMERGENT_LLM_KEY", "")
